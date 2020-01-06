@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+                        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                        http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context 
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+
+ 
+
+   <context:annotation-config />
+    
+   <context:component-scan base-package="com.tadigital.trainingproject.controller" />
+   <context:component-scan base-package="com.tadigital.trainingproject.customer.controller" />
+   <context:component-scan base-package="com.tadigital.trainingproject.vendor.controller" />
+   
+    
+   <mvc:annotation-driven />
+   
+   <mvc:resources location="/bootstrap-3.4.1-dist/" mapping="/bootstrap-3.4.1-dist/**"></mvc:resources>
+   <mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
+   <mvc:resources location="/fontawesome-free-5.9.0-web/" mapping="/fontawesome-free-5.9.0-web/**"></mvc:resources>
+   <mvc:resources location="/images/" mapping="/images/**"></mvc:resources>
+   <mvc:resources location="/images/custimages" mapping="/images/custimages/**"></mvc:resources>
+   <mvc:resources location="/jquery/" mapping="/jquery/**"></mvc:resources>
+   <mvc:resources location="/" mapping="/**"></mvc:resources>
+   
+   <bean id="multipartResolver"   
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>  
+   
+     
+</beans>
